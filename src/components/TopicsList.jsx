@@ -2,7 +2,7 @@ import { lessonIcon, lockIcon } from '@/data';
 import React from 'react';
 
 import { useState } from "react";
-import { Minus, Plus } from "lucide-react"; // optional: use Lucide icons for clean icons
+import { Minus, Plus } from "lucide-react";
 
 const TopicItem = ({
   title,

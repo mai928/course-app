@@ -4,7 +4,6 @@ const AskQuestionPopup = ({ isOpen, onClose, onSubmit }) => {
   const [question, setQuestion] = useState('');
   const localStorageKey = 'askQuestionDraft';
 
-  // Load draft from localStorage on mount
   useEffect(() => {
     if (isOpen) {
       const savedDraft = localStorage.getItem(localStorageKey);
@@ -14,9 +13,8 @@ const AskQuestionPopup = ({ isOpen, onClose, onSubmit }) => {
     }
   }, [isOpen]);
 
-  // Save draft to localStorage whenever question changes
   useEffect(() => {
-    if (isOpen) { // Only save if the popup is currently open
+    if (isOpen) { 
       localStorage.setItem(localStorageKey, question);
     }
   }, [question, isOpen]);
@@ -27,7 +25,7 @@ const AskQuestionPopup = ({ isOpen, onClose, onSubmit }) => {
     if (question.trim()) {
       onSubmit(question);
       setQuestion('');
-      localStorage.removeItem(localStorageKey); // Clear draft after submission
+      localStorage.removeItem(localStorageKey); 
       onClose();
     }
   };
