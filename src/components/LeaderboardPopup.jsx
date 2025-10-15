@@ -4,17 +4,17 @@ const LeaderboardPopup = ({ isOpen, onClose, leaderboardData }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md relative">
+    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50">
+      <div className="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm relative">
         <div className='text-[#080264] text-center my-3'>
           <h3 className="  ">Course Name Shown Here</h3>
           <p className='font-semibold'>Leaderboard</p>
         </div>
-        <div className='flex items-center gap-3 px-2 text-[#080264] bg-gray-50'>
-          <p className='text-end text-sm py-2 '>عظيم يا صديقي.. أداءك في الكورس ده أفضل من 60% من باقي الطلبة.. كمّل عايز أشوف اسمك في الليدر بورد هنا
+        <div className='flex items-center gap-2 px-2 text-[#080264] bg-gray-50'>
+          <p className='text-end text-sm py-2 px-4 '>عظيم يا صديقي.. أداءك في الكورس ده أفضل من 60% من باقي الطلبة.. كمّل عايز أشوف اسمك في الليدر بورد هنا
 
           </p>
-          <img width={30} src='/support.png' />
+          <img width={40} src='/support.png' />
 
         </div>
 
